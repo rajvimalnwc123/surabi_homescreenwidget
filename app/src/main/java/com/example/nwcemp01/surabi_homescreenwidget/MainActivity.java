@@ -3,6 +3,7 @@ package com.example.nwcemp01.surabi_homescreenwidget;
 import android.appwidget.AppWidgetManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -29,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
                     JSONObject jsonObject = null;
                     try {
                         jsonObject = new JSONObject(String.valueOf(args[0]));
+
+                        Log.v("RES JSOB",""+jsonObject);
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }

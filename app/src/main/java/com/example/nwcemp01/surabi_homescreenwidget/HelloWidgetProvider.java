@@ -20,6 +20,8 @@ public class HelloWidgetProvider extends AppWidgetProvider{
             "dd MMM yyyy  hh:mm:ss a");
     static String strWidgetText = "";
     public static String MY_WIDGET_UPDATE = "MY_OWN_WIDGET_UPDATE";
+//public static String chebarsellingrate,chebarbuyingrate,cheftsellingrate,cheftbuyingrate;
+
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -74,13 +76,39 @@ public class HelloWidgetProvider extends AppWidgetProvider{
         Api api =new Api();
         String currentTime = formatter.format(new Date());
         strWidgetText = currentTime;
+remoteViews.setTextViewText(R.id.chebarsellingrate,"BAR :" +" "+ getchebarsellingrate());
+        remoteViews.setTextViewText(R.id.chebarbuyingrate,"    FT :" +" "+ getchebarbuyingrate());
 
-        remoteViews.setTextViewText(R.id.title,getMessage());
-        remoteViews.setTextViewText(R.id.desc,getDescription());
-        remoteViews.setTextViewText(R.id.content, getDescription2());
+        remoteViews.setTextViewText(R.id.cheftbuyingrate,"GOLD :" +" "+ getGoldBid());
+        remoteViews.setTextViewText(R.id.cheftsellingrate,"   INR :" +" "+ getcheftsellingrate());
+        remoteViews.setTextViewText(R.id.title, getMessage());
+      ////  remoteViews.setTextViewText(R.id.desc,"+getDescription());
+    // remoteViews.setTextViewText(R.id.content,getDescription2());
         appWidgetManager.updateAppWidget(thisWidget, remoteViews);
     }
 
+
+    public static String getchebarsellingrate() {
+        return Api.Chebarsellingrate;
+    }
+
+    public static String getchebarbuyingrate() {
+        return Api.Chebarbuyingrate;
+    }
+
+    public static String getcheftsellingrate() {
+        return Api.Cheftsellingrate;
+    }
+
+    public static String getcheftbuyingrate() {
+        return Api.Cheftbarbuyingrate;
+    }
+
+
+
+    public static String getGoldBid() {
+        return Api.GoldBid;
+    }
     private static String getMessage() {
         return Api.GoldAsk;
     }

@@ -1,5 +1,7 @@
 package com.example.nwcemp01.surabi_homescreenwidget;
 
+import android.util.Log;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -9,7 +11,7 @@ import org.json.JSONObject;
 public class JSONUtils {
 
 
-    public static String mgold_bid, mgold_ask, mgold_desc;
+    public  String mgold_bid, mgold_ask, mgold_desc;
 
 
     // private static final Gson gson = new Gson();
@@ -82,20 +84,42 @@ public class JSONUtils {
         if (jsonObject != null) {
             if (jsonObject.length() > 0) {
 
-
+                try {
+                    Log.v("Res marketplace",""+jsonObject.getString("marketstatus"));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
                 try {
                     JSONObject jobj = new JSONObject(jsonObject.toString());
                     System.out.println("Get Api data's ::"+jobj.toString());
-                    mgold_bid = jobj.getString("gold_bid");
-                    mgold_ask = jobj.getString("lastupdate");
-                    mgold_desc = jobj.getString("app_message");
-
                     Api api = new Api();
-                    api.setGoldAsk(mgold_ask);
-                    api.setGoldBid(mgold_bid);
-                    api.setGoldsesc(mgold_desc);
+                    if(jsonObject.getString("marketstatus").equalsIgnoreCase("1")) {
+                        String mgold_bid = jobj.getString("gold_bid");
+                        String mgold_ask = jobj.getString("lastupdate");
+                        String mgold_desc = jobj.getString("app_message");
+                        String mChebarsellingrate =jobj.getString("chequebarsellingrate");
+                       String mChebarbuyrate =jobj.getString("inr_ask");
+                        String mCheftsellingrate =jobj.getString("chequeftsellingrate");
+                      //  String mCheftbuyrate =jobj.getString("chequeftbuyingrate");
+                        Log.v("Res marketplace as 1",""+jsonObject.getString("marketstatus"));
 
+
+api.setChebarsellingrate(mChebarsellingrate);
+                       api.setChebarbuyingrate(mChebarbuyrate);
+                        api.setCheftsellingrate(mCheftsellingrate);
+                    //    api.setCheftbarbuyingrate(mCheftbuyrate);
+                        api.setGoldAsk(mgold_ask);
+                        api.setGoldBid(mgold_bid);
+                       api.setGoldsesc(mgold_desc);
+                    }else {
+                        String mgold_desc = jobj.getString("app_message");
+                        api.setGoldsesc(mgold_desc);
+
+                        Log.v("Res marketplace  as 0",""+jsonObject.getString("marketstatus"));
+                    }
                     //     Log.e("mgold_bid Response", api.getGoldAsk());
+
+
 
                 } catch (JSONException e) {
                     e.printStackTrace();

@@ -1,10 +1,251 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView android:id="@+id/content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="5" android:textColor="#ddffb6" android:textSize="18sp" android:textStyle="normal"/>
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#e5d4b6"
+    android:orientation="vertical">
 
-    <TextView android:id="@+id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="5" android:textColor="#ddffb6" android:textSize="18sp" android:textStyle="normal"/>
-    <TextView android:id="@+id/desc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="5" android:textColor="#ddffb6" android:textSize="18sp" android:textStyle="normal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1.5"
+        android:weightSum="2">
+
+            <TextView
+                android:id="@+id/chebarsellingrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:maxLines="5"
+                android:text="BAR : 3165"
+                android:textColor="@android:color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/chebarbuyingrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="5"
+
+            android:text="   FT : 2344"
+            android:layout_margin="5dp"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+<TextView
+    android:layout_width="1dp"
+    android:layout_height="match_parent"
+
+    android:background="@android:color/darker_gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/cheftbuyingrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:maxLines="5"
+            android:layout_marginTop="14dp"
+            android:text="GOLD : 3165"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cheftsellingrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="5"
+            android:layout_marginTop="20dp"
+            android:text="   INR : 2344"
+
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+
+
+
+
 
 </LinearLayout>
+
+
+    <TextView
+android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:maxLines="5"
+        android:text="csae  t4t 4 4346 34 36"
+        android:textColor="@android:color/black"
+        android:textSize="10sp"
+        android:gravity="right"
+        android:textStyle="bold"
+        android:layout_weight="1"
+        android:visibility="visible" />
+
+
+
+
+</LinearLayout>
+
+
+
+
+
+
+<!--
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="2">
+</LinearLayout>
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="25dp"
+            android:background="@android:color/black"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:maxLines="5"
+                android:text="GOLD :"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <TextView
+
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:maxLines="5"
+                android:text="gold value"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:maxLines="5"
+                android:text="FT :"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="50dp"
+            android:background="@android:color/black"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:maxLines="5"
+                android:text="INR :"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/cheftsellingrate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:maxLines="5"
+                android:text="inr value"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+</LinearLayout>
+
+
+&lt;!&ndash;
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="ddwdqwd"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+&ndash;&gt;
+
+-->
